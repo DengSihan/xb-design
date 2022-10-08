@@ -16,12 +16,12 @@
 
 			&:focus + label,
 			&:not(:placeholder-shown) + label {
-				@apply text-sm top-0;
+				@apply text-sm -translate-y-2;
 			}
 		}
 
 		label {
-			@apply bg-white px-2 text-base absolute z-10 left-2 -translate-y-2 top-6 transition-[top,text-color,font-size] duration-75;
+			@apply bg-white px-2 text-base absolute z-10 left-2 translate-y-4 cursor-text top-0 transition-[transform,text-color,font-size] duration-75;
 		}
 
 		p {
@@ -29,6 +29,16 @@
 
 			span {
 				@apply list-item;
+			}
+		}
+
+		&.has-errors {
+			input {
+				@apply text-red-600 border-red-600;
+			}
+
+			label {
+				@apply text-red-600;
 			}
 		}
 	}
@@ -39,6 +49,9 @@
 	
 	<fieldset
 		class="xb-input-wrapper"
+		:class="{
+			'has-errors': hasErrors
+		}"
 		v-bind="$attrsClassStyleIdOnly">
 			
 		<input

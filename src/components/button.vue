@@ -1,7 +1,7 @@
 <style lang="scss">
 	
 	.xb-button {
-		@apply p-3 rounded transition-transform duration-75 font-bold;
+		@apply p-3 rounded transition-transform duration-75;
 
 		&:not([disabled]) {
 			@apply hover:scale-[101%] active:scale-[99%];
