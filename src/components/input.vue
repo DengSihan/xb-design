@@ -4,7 +4,7 @@
 		@apply relative;
 
 		input {
-			@apply border border-2 p-3 w-full block rounded text-base placeholder-transparent outline-none;
+			@apply border border-2 pt-3 pb-2 px-3 w-full block rounded placeholder-transparent outline-none;
 
 			&:focus {
 				@apply border-blue-600;
@@ -16,12 +16,12 @@
 
 			&:focus + label,
 			&:not(:placeholder-shown) + label {
-				@apply text-sm -translate-y-2;
+				@apply scale-[75%] -translate-y-2;
 			}
 		}
 
 		label {
-			@apply bg-white px-2 text-base absolute z-10 left-2 translate-y-4 cursor-text top-0 transition-[transform,text-color,font-size] duration-75;
+			@apply bg-white px-2 text-base absolute z-10 left-2 translate-y-3 cursor-text top-0 transition-[transform,text-color] duration-75 origin-[center_left];
 		}
 
 		p {
