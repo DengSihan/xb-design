@@ -4,7 +4,6 @@ import components from '~/components/index.js';
 import globalMixin from '~/mixins/global.js';
 
 import ClickOutside from 'click-outside-vue3';
-import Notifications from '@kyvg/vue3-notification';
 import VWave from 'v-wave';
 import FloatingVue from 'floating-vue';
 
@@ -15,7 +14,6 @@ const xiangdui = {
 
 		// add thrid part plugins
 		app.use(ClickOutside)
-			.use(Notifications)
 			.use(VWave, {
 				color: 'currentColor',
 			})
@@ -34,7 +32,3 @@ const xiangdui = {
 }
 
 export default xiangdui;
-
-import { notify } from '@kyvg/vue3-notification';
-
-export { notify };

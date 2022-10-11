@@ -25,6 +25,10 @@
 		&.info {
 			@apply text-white bg-slate-600;
 		}
+
+		&.alert {
+			@apply text-black bg-orange-500;
+		}
 	}
 
 </style>
@@ -68,7 +72,7 @@ export default {
 			type: String,
 			default: 'primary',
 			validator: scheme => {
-				return ['primary', 'success', 'danger', 'info'].includes(scheme);
+				return ['primary', 'success', 'danger', 'info', 'alert'].includes(scheme);
 			},
 		}
 	},

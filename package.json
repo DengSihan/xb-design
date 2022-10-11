@@ -28,7 +28,6 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
-        "@kyvg/vue3-notification": "^2.3.6",
         "click-outside-vue3": "^4.0.1",
         "floating-vue": "^2.0.0-beta.19",
         "v-wave": "^1.5.0"
