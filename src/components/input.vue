@@ -25,7 +25,7 @@
 		}
 
 		p {
-			@apply text-sm my-1 pl-6;
+			@apply text-sm my-1;
 
 			span {
 				@apply list-item;
