@@ -40,6 +40,25 @@
 			button
 		</xb-button>
 
+		<xb-select
+			name="type"
+			placeholder="<i class='mdi mdi-account pr-2'></i>Type"
+			:tips="[
+				'please select your account type'
+			]"
+			v-model="select.form.type"
+			v-model:errors="select.errors.type">
+			<option>
+				Worker
+			</option>
+			<option>
+				Driver
+			</option>
+			<option>
+				Engineer
+			</option>
+		</xb-select>
+
 	</main>
 </template>
 
@@ -56,6 +75,15 @@ export default {
 				errors: {
 					name: [],
 				},
+			},
+
+			select: {
+				form: {
+					type: null,
+				},
+				errors: {
+					type: [],
+				}
 			}
 		}
 	}
