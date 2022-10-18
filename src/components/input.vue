@@ -55,10 +55,22 @@
 		v-bind="$attrsClassStyleIdOnly">
 			
 		<input
+			v-if="type !== 'file'"
+			:type="type"
 			:id="`${name}-input`"
 			:aria-describedby="inputIsDescribedby"
 			:placeholder="placeholder.html2text() || ' '"
 			v-model="computedValue"
+			v-bind="$attrsWithoutClassStyleId">
+
+		<input
+			v-else
+			ref="input"
+			:type="type"
+			:id="`${name}-input`"
+			:aria-describedby="inputIsDescribedby"
+			:placeholder="placeholder.html2text() || ' '"
+			@change="fileInputChanged"
 			v-bind="$attrsWithoutClassStyleId">
 
 		<label
@@ -118,6 +130,11 @@ export default {
 			required: true,
 			type: String,
 		},
+		type: {
+			required: false,
+			type: String,
+			default: 'text',
+		},
 	},
 
 	emits: [
@@ -159,6 +176,21 @@ export default {
 				]
 				.filter(i => i)
 				.join(' ');
+		}
+	},
+
+	methods: {
+		fileInputChanged () {
+			let input = this.$refs.input;
+
+			let file = input.files[0];
+
+			if (file) {
+				this.computedValue = file;
+			}
+			else {
+				input.value = null;
+			}
 		}
 	}
 }

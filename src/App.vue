@@ -11,6 +11,16 @@
 			v-model="input.form.name"
 			v-model:errors="input.errors.name"/>
 
+		<xb-input
+			type="file"
+			name="avatar"
+			placeholder="<i class='mdi mdi-account pr-2'></i>Avatar"
+			:tips="[
+				'please upload your avatar'
+			]"
+			v-model="input.form.avatar"
+			v-model:errors="input.errors.avatar"/>
+
 		<xb-button>
 			button
 		</xb-button>
@@ -80,9 +90,11 @@ export default {
 			input: {
 				form: {
 					name: '',
+					avatar: '',
 				},
 				errors: {
 					name: [],
+					avatar: [],
 				},
 			},
 
