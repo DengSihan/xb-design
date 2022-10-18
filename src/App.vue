@@ -59,6 +59,15 @@
 			</option>
 		</xb-select>
 
+		<xb-textarea
+			name="desc"
+			placeholder="<i class='mdi mdi-account pr-2'></i>Desc"
+			:tips="[
+				'please input desc'
+			]"
+			v-model="textarea.form.desc"
+			v-model:errors="textarea.errors.desc"/>
+
 	</main>
 </template>
 
@@ -79,10 +88,19 @@ export default {
 
 			select: {
 				form: {
-					type: null,
+					type: '',
 				},
 				errors: {
 					type: [],
+				}
+			},
+
+			textarea: {
+				form: {
+					desc: '',
+				},
+				errors: {
+					desc: []
 				}
 			}
 		}
