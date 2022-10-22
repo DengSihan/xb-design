@@ -1,5 +1,13 @@
 {
     "name": "xb-design",
+    "version": "0.0.1-dev",
+    "files": [
+        "dist/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DengSihan/xb-design.git"
+    },
     "main": "./dist/index.umd.js",
     "module": "./dist/index.es.js",
     "exports": {
