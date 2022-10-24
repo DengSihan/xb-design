@@ -1,3 +1,4 @@
+import '~/assets/library.scss';
 import '~/extends.js';
 
 import components from '~/components/index.js';
@@ -8,7 +9,7 @@ import VWave from 'v-wave';
 import FloatingVue from 'floating-vue';
 
 const xiangdui = {
-	install(app, options) {
+	install(app) {
 
 		app.config.unwrapInjectedRef = true;
 
