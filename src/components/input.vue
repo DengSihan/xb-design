@@ -4,7 +4,16 @@
 		@apply relative;
 
 		input {
-			@apply border border-2 pt-3 pb-2 px-3 w-full block rounded placeholder-transparent outline-none;
+
+			&:not([type="range"]) {
+				@apply px-3 pt-3 pb-2;
+			}
+
+			&[type="range"] {
+				@apply my-3;
+			}
+
+			@apply border-2 w-full block rounded placeholder-transparent outline-none;
 
 			&:focus {
 				@apply border-blue-600;
